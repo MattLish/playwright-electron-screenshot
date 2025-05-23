@@ -4,7 +4,7 @@ import * as path from "path";
 function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1000,
-    height: 5,
+    height: 500,
     minWidth: 1000,
     maxWidth: 1000,
     minHeight: 500,
