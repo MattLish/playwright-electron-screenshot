@@ -4,7 +4,11 @@ import * as path from "path";
 function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1000,
-    height: 500,
+    height: 1200,
+    minWidth: 1000,
+    maxWidth: 1000,
+    minHeight: 1200,
+    maxHeight: 1200,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -15,6 +19,7 @@ function createWindow() {
   });
 
   mainWindow.showInactive();
+  // mainWindow.webContents.openDevTools();
 
   mainWindow.loadFile(path.join(__dirname, "../index.html"));
 }

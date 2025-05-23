@@ -31,17 +31,17 @@ test("should take a screenshot of the app", async () => {
   // Wait for the app to be fully loaded
   await window.waitForLoadState("domcontentloaded");
 
-  await scaleImage({
-    inputPath: path.join(
-      __dirname,
-      "./screenshot.spec.ts-snapshots/electron-app_large.png",
-    ),
-    outputPath: path.join(
-      __dirname,
-      "./screenshot.spec.ts-snapshots/electron-app.png",
-    ),
-    scale: "half",
-  });
+  // await scaleImage({
+  //   inputPath: path.join(
+  //     __dirname,
+  //     "./screenshot.spec.ts-snapshots/electron-app_large.png",
+  //   ),
+  //   outputPath: path.join(
+  //     __dirname,
+  //     "./screenshot.spec.ts-snapshots/electron-app.png",
+  //   ),
+  //   scale: "half",
+  // });
 
   // Take a screenshot and compare with the baseline
   // await expect(window).toHaveScreenshot("electron-app.png", {scale: "css"});
