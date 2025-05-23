@@ -16,6 +16,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
+      - name: Set Windows display resolution
+        if: runner.os == 'Windows'
+        shell: powershell
+        run: Set-DisplayResolution -Width 1920 -Height 1080 -Force
       - name: Read display settings
         if: runner.os == 'macOS'
         run: defaults read /Library/Preferences/com.apple.windowserver.displays.plist
