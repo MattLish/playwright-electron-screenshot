@@ -4,11 +4,11 @@ import * as path from "path";
 function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1000,
-    height: 1200,
+    height: 5,
     minWidth: 1000,
     maxWidth: 1000,
-    minHeight: 1200,
-    maxHeight: 1200,
+    minHeight: 500,
+    maxHeight: 500,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
