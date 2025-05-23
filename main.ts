@@ -16,10 +16,11 @@ function createWindow() {
     minimizable: false,
     maximizable: false,
     show: false,
+    frame: false,
   });
 
   mainWindow.showInactive();
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   mainWindow.loadFile(path.join(__dirname, "../index.html"));
 }
