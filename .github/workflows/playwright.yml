@@ -9,12 +9,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ windows-latest, macos-15 ]
+        os: [ windows-latest, macos-latest ]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Read display settings
-        if: runner.os == 'macOS'
-        run: defaults read /Library/Preferences/com.apple.windowserver.displays.plist
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -31,3 +28,4 @@ jobs:
           name: playwright-report-${{ matrix.os }}
           path: .playwright
           retention-days: 30
+          include-hidden-files: 'true'
