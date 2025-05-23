@@ -28,6 +28,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
+    // deviceScaleFactor: 1
   },
 
   reporter: [
@@ -48,6 +49,7 @@ export default defineConfig({
     toHaveScreenshot: {
       // Remove the platform from screenshots so that it works across platforms
       pathTemplate: "{snapshotDir}/{testFileName}-snapshots/{arg}{ext}",
+      // scale: "css"
     },
   },
 

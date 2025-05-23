@@ -31,5 +31,6 @@ test("should take a screenshot of the app", async () => {
   await window.waitForLoadState("domcontentloaded");
 
   // Take a screenshot and compare with the baseline
+  // await expect(window).toHaveScreenshot("electron-app.png", {scale: "css"});
   await expect(window).toHaveScreenshot("electron-app.png");
 });

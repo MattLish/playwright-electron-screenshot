@@ -11,9 +11,10 @@ function createWindow() {
     },
     minimizable: false,
     maximizable: false,
-
     show: false,
   });
+
+  mainWindow.showInactive();
 
   mainWindow.loadFile(path.join(__dirname, "../index.html"));
 }
