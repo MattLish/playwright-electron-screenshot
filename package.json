@@ -9,7 +9,8 @@
     "lint": "prettier --check \"**/*.{ts,html,json,md}\"",
     "format": "prettier --write \"**/*.{ts,html,json,md}\"",
     "pretest": "npm run build",
-    "test": "playwright test"
+    "test": "playwright test",
+    "prepare": "husky"
   },
   "author": "",
   "license": "ISC",
@@ -17,11 +18,16 @@
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.21",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
     "playwright": "^1.52.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {
     "electron": "^36.3.1"
+  },
+  "lint-staged": {
+    "**/*.{ts,html,json,md}": "prettier --write"
   }
 }
