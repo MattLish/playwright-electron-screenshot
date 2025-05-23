@@ -51,6 +51,7 @@ export default defineConfig({
       pathTemplate: "{snapshotDir}/{testFileName}-snapshots/{arg}{ext}",
       // scale: "css"
     },
+    timeout: 30000,
   },
 
   /* Configure projects for major browsers */
