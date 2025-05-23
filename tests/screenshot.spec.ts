@@ -47,5 +47,6 @@ test("should take a screenshot of the app", async () => {
   // await expect(window).toHaveScreenshot("electron-app.png", {scale: "css"});
   await expect(window).toHaveScreenshot("electron-app.png", {
     scale: "css",
+    fullPage: true,
   });
 });
