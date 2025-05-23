@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, screen } from "electron";
 import * as path from "path";
 
 function createWindow() {
@@ -9,6 +9,10 @@ function createWindow() {
       nodeIntegration: true,
       contextIsolation: false,
     },
+    minimizable: false,
+    maximizable: false,
+
+    show: false,
   });
 
   mainWindow.loadFile(path.join(__dirname, "../index.html"));
@@ -20,6 +24,8 @@ app.whenReady().then(() => {
   app.on("activate", function () {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
+
+  console.log("Scale Factor:", screen.getPrimaryDisplay().scaleFactor);
 });
 
 app.on("window-all-closed", function () {
